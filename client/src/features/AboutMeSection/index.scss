@@ -1,0 +1,95 @@
+@import "../../assets/styles/index.scss";
+
+
+.about-container {
+    display: flex;                          /* Using flexbox */
+    flex-direction: column;                 /* Items arranged in a column */
+    justify-content: center;                /* Center items vertically */
+    align-items: center;                    /* Center items horizontally */
+    padding: 128px;                          /* Add padding around the content */
+    gap: 128px;                             /* Add space between flex items */
+    background: url("../../assets/icons/aboutMe.png"), #1A1E23; /* Background image with fallback color */
+    background-size: cover;                  /* Makes sure the background image covers the whole container */
+    background-repeat: no-repeat;            /* Prevents the background image from repeating */
+    background-position: center center;      /* Ensures the image is centered */
+    border: 1px solid #000000;               /* Black border around the container */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Shadow effect (adjust alpha for more or less shadow) */
+
+    .about-content-wrapper {
+        max-width: 1920px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 128px;
+
+        .about-content-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 64px;
+            .about-content-left-title {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 16px 40px;
+                background: var(--background-color);
+                border: 4px solid var(--primary-color);
+                border-radius: 40px 0px;
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 64px;
+                line-height: 72px;
+                text-transform: capitalize;
+                color: var(--text-color);
+            }
+            .about-content-left-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px 40px;
+                gap: 16px;
+                background: var(--background-color);
+                border-radius: 40px;
+                .p-tag {
+                    font-family: 'IBM Plex Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: var(--brand-two-color);
+                }
+
+                .content {
+                    font-family: 'IBM Plex Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-transform: capitalize;
+                    color: var(--text-color);
+                    .content-hello {
+                        font-weight: 500;
+                        font-size: 32px;
+                        line-height: 42px;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+        .about-content-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            border-radius: 16px;
+            img {
+                max-width: 462px;
+            }
+        }
+    }
+}

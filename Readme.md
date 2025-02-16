@@ -31,8 +31,9 @@ This is my personal portfolio website where I showcase my web development projec
 
 - **Frontend**: 
   - **React.js** – JavaScript library for building the user interface.
-  - **CSS3 / SCSS** – For styling and responsive layout.
+  - **Tailwind CSS** – For styling and responsive layout.
   - **React Router** – For navigating between different pages.
+  - **Redux** - For State management
   - **Axios** – To handle HTTP requests between the frontend and backend.
 
 - **Backend**:

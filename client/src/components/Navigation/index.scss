@@ -1,0 +1,155 @@
+@import "../../assets/styles/index.scss";
+
+.navigation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    gap: 24px;
+    position: fixed;
+    left: 64px;
+    top: 171px;
+    z-index: 1000;
+    background: var(--background-two-color);
+    border: 1px solid var(--text-color);
+    border-radius: 40px;
+    max-width: 64px;
+
+    .icon-grid {
+        background: var(--text-color);
+    }
+    .navigation-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        &:hover {
+            transform: scale(1.2);
+            filter: brightness(1.5);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+        &:hover .icon {
+          transform: rotate(360deg);
+        }
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: brightness(1);
+    }
+    .icon:hover {
+        filter: brightness(1.5);
+        animation: glowing 1.5s infinite alternate;
+    }
+    
+    @keyframes glowing {
+        0% {
+            filter: brightness(1.5);
+        }
+        50% {
+            filter: brightness(2);
+        }
+        100% {
+            filter: brightness(1.5);
+        }
+    }
+}
+
+
+
+//   .navigation-container {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     position: relative;
+//     padding: 20px;
+//     background-color: #000;
+//     overflow: hidden;
+//     height: 100vh;
+//     width: 100%;
+//     z-index: 10;
+    
+//     /* Starry background animation */
+//     &:before {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       background: url('../../assets/icons/stars.jpg') repeat;
+//       animation: moveStars 100s linear infinite;
+//       z-index: -1;
+//     }
+//   }
+  
+//   @keyframes moveStars {
+//     0% {
+//       background-position: 0 0;
+//     }
+//     100% {
+//       background-position: -2000px -2000px;
+//     }
+//   }
+  
+//   .navigation-icon {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     border-radius: 50%;
+//     padding: 0; /* Removed padding to avoid any gaps */
+//     margin: 0; /* Removed margin to avoid any gaps */
+//     cursor: pointer;
+//     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+//     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    
+//     &:hover {
+//       transform: scale(1.2);
+//       filter: brightness(1.5);
+//       box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+//     }
+  
+//     .icon {
+//       width: 50px;
+//       height: 50px;
+//       transition: transform 0.3s ease;
+//     }
+  
+//     &:hover .icon {
+//       transform: rotate(360deg);
+//     }
+//   }
+  
+//   .icon {
+//     transition: transform 0.3s ease, filter 0.3s ease;
+//     filter: brightness(1);
+//   }
+  
+//   .icon:hover {
+//     filter: brightness(1.5);
+//     animation: glowing 1.5s infinite alternate;
+//   }
+  
+//   @keyframes glowing {
+//     0% {
+//       filter: brightness(1.5);
+//     }
+//     50% {
+//       filter: brightness(2);
+//     }
+//     100% {
+//       filter: brightness(1.5);
+//     }
+//   }
+  
+  

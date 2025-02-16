@@ -1,0 +1,128 @@
+/* 1. Global Reset (optional but recommended) */
+
+/* Universal box-sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default styles for common elements */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* 2. Base Typography */
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color); /* Make sure you've defined this in your variables file */
+  background-color: var(--background-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  margin-bottom: var(--spacing-medium);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-small);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--primary-color); /* You can change this color based on your theme */
+}
+
+/* 3. Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4. Global Components Styling (optional) */
+button {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input,
+textarea {
+  padding: var(--spacing-small);
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* 5. Media Queries (responsive design) */
+
+/* Mobile-first approach: For small screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-small);
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}

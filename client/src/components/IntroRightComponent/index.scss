@@ -1,0 +1,147 @@
+@import "../../assets/styles/index.scss";
+
+.intro-right-container {
+    margin: 44px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    .intro-right-wrapper-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 32px;
+        .top-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            .top-h-opening-tag {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: var(--brand-two-color);
+            }
+            .top-content-h-closing-tag {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px 16px;
+                .top-content {
+                    /* H1-U */
+                    font-family: 'Ubuntu';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 64px;
+                    line-height: 72px;
+                    text-transform: capitalize;
+                    color: var(--text-color);
+                }
+                .top-middle-content {
+                    font-family: 'Ubuntu';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 64px;
+                    line-height: 72px;
+                    color: var(--text-color);
+                    .sub-part {
+                        color: var(--primary-color);
+                    }
+                }
+                .top-last-content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    padding: 0px;
+                    gap: 16px;
+                }
+                
+            }
+        }
+        .bottom-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 16px;
+            .p-tag {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: var(--brand-two-color);
+            }
+            .desc-txt {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 0px 24px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: var(--text-color);
+            }
+            .talk-cta-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-left: 24px;
+                gap: 16px;
+                .talk-txt {
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 42px;
+                    text-transform: capitalize;
+                    color: var(--primary-color);
+                }
+                .main-btn {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 8px;
+                    width: 40px;
+                    height: 40px;
+                    background: var(--grey-color);
+                    border-radius: 40px;
+                    .mail-icon-image {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .intro-right-wrapper-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 48px 32px;
+        gap: 48px;
+        background: var(--background-two-color);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 80px;
+        .intro-right-topic {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 16px;
+            .topic-number {
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 62px;
+                text-transform: capitalize;
+                color: var(--primary-color);
+            }
+            .topic-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+    }
+}

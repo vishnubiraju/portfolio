@@ -1,26 +1,25 @@
 // client/src/App.js
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Provider } from 'react-redux'; // Import Provider from react-redux
+import createStore from './redux/store'; // Import your store (redux setup)
+import AppRoutes from './routes';
+import './assets/styles/index.scss';
+import Header from './components/Header';
+import NavigationComponent from './components/Navigation';
+
 
 function App() {
-  const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    axios.get('http://localhost:5000')
-      .then(response => {
-        setMessage(response.data);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the data!', error);
-      });
-  }, []);
-
+  const store = createStore({});
   return (
-    <div>
-      <h1>{message}</h1>
-    </div>
+    <Provider store={store}>
+      <Header/>
+      {/* <NavigationComponent /> */}
+      <AppRoutes/>
+    </Provider>
   );
 }
+
 
 export default App;
 
